@@ -1,4 +1,4 @@
-package me.deborah.core.ioc_container_and_bean.chapter9_ApplicationContext_ResourceLoader;
+package me.deborah.core.resource_and_validation.validattion_abstraction;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

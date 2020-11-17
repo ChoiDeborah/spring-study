@@ -1,0 +1,31 @@
+- Resource 추상화
+추상화를 시킨 이유?
+URL class 가 classpath를 기준으로 리소스를 가져오는 기능이 없었음
+http ftp htps
+스프링 입장에서는 classPath로 가져오는걸로... 방법을 통일 시킨 것
+
+어떤걸 추상화 시켰냐?
+java.net.URL을 감싼 것 org.springframework.core.io.Resource로
+실제 로우레벨에 있는 리소스에 접근하는 기능을 만든 것
+리소스 자체를 추상화 시킨것
+
+ApplicationContext를 만들때,
+- ClassPathXmlApplicationContext : 클래스 패스를 기준으로 문자열에 있는 설정파일 리소스를 찾는다.
+- FileSystemApplicationContext : 파일 시스템 경로 기준으로 로케이션에 있는 문자열에 해당하는 리소스를 찾음.
+
+항상 존재하는 리소스라는 가정을 하지 않음
+exists()로 확인..
+getFile <- 제한적임
+등등.. 여러 매소드들 존재
+
+UrlResource
+ClassPathResource : classPath로 Resolve함
+ServletContextResource : 읽어들이는 리소스 타입이 ApplicationContext 타입에 따라 결정됨 그래서 사실상 가장 많이 쓰임
+
+ApplicationContext와 상관없이 리소스 타입을 강제하려면 java.net.URL 접두어(+classPath:)중 하나를 사용할 수 있다.
+리소스를 보고서는 어디서 있는지 모름... 그래서 명시적으 접두어 쓰는걸 추천함.로
+
+
+
+
+

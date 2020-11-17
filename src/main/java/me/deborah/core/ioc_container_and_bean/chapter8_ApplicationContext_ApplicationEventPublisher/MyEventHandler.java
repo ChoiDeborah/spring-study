@@ -1,7 +1,6 @@
 package me.deborah.core.ioc_container_and_bean.chapter8_ApplicationContext_ApplicationEventPublisher;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.Ordered;

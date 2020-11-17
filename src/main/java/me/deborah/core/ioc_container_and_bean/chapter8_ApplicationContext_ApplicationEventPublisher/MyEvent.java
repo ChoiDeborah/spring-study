@@ -1,7 +1,5 @@
 package me.deborah.core.ioc_container_and_bean.chapter8_ApplicationContext_ApplicationEventPublisher;
 
-import org.springframework.context.ApplicationEvent;
-
 // 이 이벤트는 빈으로 등록되는 게 아
 // 원하는 데이터를 담아서 전송할 수 있는 이벤트가 될 수도 있고
 // 이벤트를 발생시킬 소스만 전달하고 있다.
