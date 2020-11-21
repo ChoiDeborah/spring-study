@@ -1,4 +1,4 @@
-package me.deborah.core.aspect_oriendted_programming;
+package me.deborah.core.null_safety;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
