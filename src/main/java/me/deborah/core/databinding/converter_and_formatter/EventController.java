@@ -12,5 +12,4 @@ public class EventController {
         System.out.println(event);
         return event.getId().toString();
     }
-
 }
