@@ -1,4 +1,4 @@
-package me.deborah.springwebmvc;
+package me.deborah.springwebmvc.operation_principle.chap1_intro_spring_mvc;
 
 import org.springframework.stereotype.Service;
 
