@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/src/main/java/me/deborah/springwebmvc/operation_principle/chap4_servlet_listener_and_filter" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

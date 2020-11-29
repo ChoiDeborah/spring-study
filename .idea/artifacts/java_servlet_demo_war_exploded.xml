@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="java-servlet-demo:war exploded">
+    <output-path>$PROJECT_DIR$/src/main/java/me/deborah/springwebmvc/operation_principle/chap4_servlet_listener_and_filter/target/java-servlet-demo</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>java-servlet-demo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="java-servlet-demo" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/me/deborah/springwebmvc/operation_principle/chap4_servlet_listener_and_filter/target/java-servlet-demo/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="java-servlet-demo/web/Web" />
+    </root>
+  </artifact>
+</component>

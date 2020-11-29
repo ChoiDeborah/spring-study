@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-web-mvc" />
+        <module name="java-servlet-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="java-servlet-demo" target="1.7" />
       <module name="spring-web-mvc" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="java-servlet-demo" options="" />
       <module name="spring-web-mvc" options="-parameters" />
     </option>
   </component>
