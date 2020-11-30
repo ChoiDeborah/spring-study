@@ -6,6 +6,6 @@ import org.springframework.stereotype.Controller;
 
 @Configuration
 // 컴포넌트 스캔을 하는데, 디폴트 필터는 사용하지 않고, 오직 컨트롤러만 Bean으로 등록하겠다.
-@ComponentScan(useDefaultFilters = false, includeFilters = @ComponentScan.Filter(Controller.class))
+@ComponentScan
 public class WebConfig {
 }
