@@ -1,0 +1,9 @@
+[스프링 MVC 연동]
+
+스프링 웹 MVC의 가장 핵심적인 클래스인 DispatcherServlet을 우리가 만든 ServeltApplication에다가 등록해서 사용하겠다.
+(이 전까지는 ContextLoaderListener만 사용했음 = 스프링이 제공해주는 IoC컨테이너를 사용하는 방법 = Spring MVC는 아님)
+
+- DispatcherServlet을 사용해 보겠다.
+    - 우리가만든 서블릿 대신에 (web.xml 의 <servlet> / <filter> 제거)
+    - 어떤 요청을 처리하는 핸들러를(RestContorller HelloContorller.java로 쓰고싶다.)
+    - 핸들러쪽으로 요청을 분산해줄수 있고 어노테이션을 이해하 응답을 HTTP Response로 만들어줄 수 있는 DispatcherServlet을 사용해야 함.

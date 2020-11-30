@@ -9,37 +9,31 @@
     <param-name>contextClass</param-name>
     <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
   </context-param>
-
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>me.deborah.AppConfig</param-value>
   </context-param>
 
-  <filter>
-    <filter-name>myFilter</filter-name>
-    <filter-class>me.deborah.MyFilter</filter-class>
-  </filter>
-  
-  <filter-mapping>
-    <filter-name>myFilter</filter-name>
-    <servlet-name>hello</servlet-name>
-    <!-- 특정 서블릿? servlet name -->
-    <!-- 특정 URL패턴? filter-name -->
-  </filter-mapping>
-  
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
-
-
   <servlet>
-    <servlet-name>hello</servlet-name>
-    <servlet-class>me.deborah.HelloServlet</servlet-class>
+    <servlet-name>app</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextClass</param-name>
+      <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </init-param>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>me.deborah.WebConfig</param-value>
+    </init-param>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>hello</servlet-name>
-    <url-pattern>/hello</url-pattern>
+    <servlet-name>app</servlet-name>
+    <url-pattern>/app/*</url-pattern>
   </servlet-mapping>
+
 </web-app>
