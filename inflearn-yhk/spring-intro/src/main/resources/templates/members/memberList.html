@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"> <body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+            <th>#</th>
+            <th>이름</th> </tr>
+            </thead>
+            <tbody>
+            <!--loop돌면서 자료구조에 든것들 뿌려줌-->
+<!--            <tbody>-->
+<!--            <tr>-->
+<!--                <td>1</td>-->
+<!--                <td>모찌</td> </tr>-->
+<!--            <tr>-->
+<!--                <td>2</td>-->
+<!--                <td>지민</td> </tr>-->
+<!--            <tr>-->
+<!--                <td>3</td>-->
+<!--                <td>지민</td> </tr>-->
+            </tbody>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td> </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

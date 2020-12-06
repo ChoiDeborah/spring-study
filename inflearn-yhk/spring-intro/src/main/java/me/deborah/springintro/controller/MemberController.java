@@ -4,8 +4,11 @@ import me.deborah.springintro.domain.Member;
 import me.deborah.springintro.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 // 스프링 컨테이너에서 빈을 생성해서 관리
 @Controller
@@ -24,9 +27,9 @@ public class MemberController {
 
     // 생성자 주입 (권장)
     @Autowired  // memberService를 스프링이 연결시켜
-                // MemberService 순수 자바 클래스...
-                // 마찬가지로 빈으로 등록해줘야함
-                // Dependency Injection
+    // MemberService 순수 자바 클래스...
+    // 마찬가지로 빈으로 등록해줘야함
+    // Dependency Injection
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
@@ -37,12 +40,19 @@ public class MemberController {
     }
 
     @PostMapping("/members/new")
-    public String create(MemberForm form){
+    public String create(MemberForm form) {
         Member member = new Member();
         member.setName(form.getName());
 
         memberService.join(member);
 
         return "redirect:/";
+    }
+
+    @GetMapping("/members")
+    public String list(Model model) {
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+        return "members/memberList";
     }
 }
