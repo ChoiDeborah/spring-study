@@ -8,8 +8,18 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MemberController {
 
-    private final MemberService memberService;
+    private MemberService memberService;
 
+    // 필드 주입 (중간에 런타임에 바꿀수가 없음...)
+    //@Autowired private MemberService memberService;
+
+    // 세터 주입 setter injection : 퍼블릭으로 노출되어있어 의도치 않게 바뀌는 상황이 발생할수 있음.
+//    @Autowired
+//    public void setMemberService(MemberService memberService) {
+//        this.memberService = memberService;
+//    }
+
+    // 생성자 주입 (권장)
     @Autowired  // memberService를 스프링이 연결시켜
                 // MemberService 순수 자바 클래스...
                 // 마찬가지로 빈으로 등록해줘야함
