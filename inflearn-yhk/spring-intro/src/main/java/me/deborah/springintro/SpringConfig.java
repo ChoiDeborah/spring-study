@@ -1,6 +1,7 @@
 package me.deborah.springintro;
 
 import me.deborah.springintro.repository.JdbcMemberRepository;
+import me.deborah.springintro.repository.JdbcTemplateMemberRepository;
 import me.deborah.springintro.repository.MemberRepository;
 import me.deborah.springintro.repository.MemoryMemberRepository;
 import me.deborah.springintro.service.MemberService;
@@ -33,6 +34,7 @@ public class SpringConfig {
         // 개방 폐쇄 원칙 OCP (Open-closed Principle)
         // 확장에는 열려있고, 수정, 변경에는 닫혀있다.
         // 인터페이스 확장 시 기존 코드를 전혀 손대지 않고, 설정만으로 구현클래스를 변경할 수 있다.
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }

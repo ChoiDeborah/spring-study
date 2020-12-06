@@ -49,7 +49,7 @@ class MemberServiceIntegrationTest {
         member1.setName("spring");
 
         Member member2 = new Member();
-        member2.setName("spring");
+        member2.setName("spring2");
 
         //when
         memberService.join(member1);
@@ -57,12 +57,6 @@ class MemberServiceIntegrationTest {
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
 
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-//        try {
-//            memberService.join(member2);
-//            fail();
-//        } catch (IllegalStateException e) {
-//            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.1111");
-//        }
         //then
     }
 }
