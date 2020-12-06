@@ -2,9 +2,11 @@ package me.deborah.springintro.repository;
 
 import com.sun.source.tree.NewArrayTree;
 import me.deborah.springintro.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     // 키 중복 문제가 있을 수 있으나 예제니까
