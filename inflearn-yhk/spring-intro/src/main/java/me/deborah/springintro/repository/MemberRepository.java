@@ -9,6 +9,8 @@ public interface MemberRepository {
     Member save(Member member);
     // Optional Java 8 문법
     Optional<Member> findById(Long id);
+
+    List<Member> findAll();
+
     Optional<Member> findByName(String name);
-    List<Member> findALl();
 }
