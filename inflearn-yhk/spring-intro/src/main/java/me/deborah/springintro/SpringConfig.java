@@ -1,5 +1,6 @@
 package me.deborah.springintro;
 
+import me.deborah.springintro.aop.TimeTradeAop;
 import me.deborah.springintro.repository.*;
 import me.deborah.springintro.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,11 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+//    @Bean
+//    public TimeTradeAop timeTradeAop() {
+//        return new TimeTradeAop();
+//    }
 
 //    @Bean
 //    public MemberRepository memberRepository() {
