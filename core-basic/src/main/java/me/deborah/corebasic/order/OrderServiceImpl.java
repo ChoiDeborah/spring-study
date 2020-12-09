@@ -1,5 +1,6 @@
 package me.deborah.corebasic.order;
 
+import me.deborah.corebasic.AppConfig;
 import me.deborah.corebasic.discount.DiscountPolicy;
 import me.deborah.corebasic.discount.FixDiscountPolicy;
 import me.deborah.corebasic.discount.RateDiscountPolicy;
@@ -8,9 +9,6 @@ import me.deborah.corebasic.member.MemberRepository;
 import me.deborah.corebasic.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
-
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-
     //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     //private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
@@ -28,7 +26,20 @@ public class OrderServiceImpl implements OrderService {
     // 실행 시 Nullpoint Exception 발생
     // 해결 방안
     // 누군가 클라이언트인 OrderServiceImpl에 DiscountPolicy 의 구현 객체를 대신 생성하고 주입해 주어야한다.
-    private DiscountPolicy discountPolicy;
+    // 생성자 주입을 통해 인터페이스에만 의존하도록 할 수 있음.
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
+    // 설계 변경으로 OrderServiceImpl 은 FixDiscountPolicy 를 의존하지 않는다! 단지 DiscountPolicy 인터페이스만 의존한다.
+    // OrderServiceImpl 입장에서 생성자를 통해 어떤 구현 객체가 들어올지(주입될지)는 알 수 없다.
+    // OrderServiceImpl 의 생성자를 통해서 어떤 구현 객체을 주입할지는 오직 외부(AppConfig)에서 결정 한다.
+    // OrderServiceImpl 은 이제부터 실행에만 집중하면 된다.
 
 
     @Override
