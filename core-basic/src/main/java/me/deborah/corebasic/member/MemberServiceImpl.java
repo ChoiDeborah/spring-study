@@ -1,8 +1,18 @@
 package me.deborah.corebasic.member;
 
 import me.deborah.corebasic.AppConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 // 구현체가 하나일 때 Impl 붙이는 관례 같은 게 있음.
+
+
+// 컴포넌트 스캔은 이름 그대로 @Component 애노테이션이 붙은 클래스를 스캔해서 스프링 빈으로 등록한 다. @Component 를 붙여주자.
+// > 참고: @Configuration 이 컴포넌트 스캔의 대상이 된 이유도 @Configuration 소스코드를 열어보면 @Component 애노테이션이 붙어있기 때문이다.
+// 이제 각 클래스가 컴포넌트 스캔의 대상이 되도록 @Component 애노테이션을 붙여주자.
+
+@Component
 public class MemberServiceImpl implements MemberService {
 
     // 의존 관계가 인터페이스 뿐만 아니라, 구현까지 모두 의존하는 문제점이 있음.
@@ -19,6 +29,7 @@ public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired  // ac.getBean(MemberRepository.class)
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
