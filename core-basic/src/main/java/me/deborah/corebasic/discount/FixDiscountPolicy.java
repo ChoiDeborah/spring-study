@@ -2,7 +2,9 @@ package me.deborah.corebasic.discount;
 
 import me.deborah.corebasic.member.Grade;
 import me.deborah.corebasic.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
     private int discountFixAmount = 1000;
 
