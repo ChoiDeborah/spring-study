@@ -2,6 +2,7 @@ package me.deborah.corebasic.order;
 
 import lombok.RequiredArgsConstructor;
 import me.deborah.corebasic.AppConfig;
+import me.deborah.corebasic.annotation.MainDiscountPolicy;
 import me.deborah.corebasic.discount.DiscountPolicy;
 import me.deborah.corebasic.discount.FixDiscountPolicy;
 import me.deborah.corebasic.discount.RateDiscountPolicy;
@@ -18,7 +19,7 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
