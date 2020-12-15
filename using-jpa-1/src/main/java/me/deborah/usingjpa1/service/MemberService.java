@@ -1,8 +1,7 @@
 package me.deborah.usingjpa1.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import me.deborah.usingjpa1.Repository.MemberRepository;
+import me.deborah.usingjpa1.repository.MemberRepository;
 import me.deborah.usingjpa1.domain.Member;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

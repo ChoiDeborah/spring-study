@@ -1,18 +1,14 @@
 package me.deborah.usingjpa1.service;
 
-import me.deborah.usingjpa1.Repository.MemberRepository;
+import me.deborah.usingjpa1.repository.MemberRepository;
 import me.deborah.usingjpa1.domain.Member;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Role;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.jsf.FacesContextUtils;
 
 import static org.junit.jupiter.api.Assertions.*;
 

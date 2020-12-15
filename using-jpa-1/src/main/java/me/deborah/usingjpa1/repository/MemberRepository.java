@@ -1,11 +1,10 @@
-package me.deborah.usingjpa1.Repository;
+package me.deborah.usingjpa1.repository;
 
 import lombok.RequiredArgsConstructor;
 import me.deborah.usingjpa1.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository

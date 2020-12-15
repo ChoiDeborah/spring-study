@@ -1,4 +1,4 @@
-package me.deborah.usingjpa1.Repository;
+package me.deborah.usingjpa1.repository;
 
 import me.deborah.usingjpa1.domain.Member;
 import org.assertj.core.api.Assertions;
