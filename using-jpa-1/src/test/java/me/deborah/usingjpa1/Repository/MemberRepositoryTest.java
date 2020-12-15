@@ -1,19 +1,14 @@
 package me.deborah.usingjpa1.Repository;
 
-import me.deborah.usingjpa1.member.Member;
+import me.deborah.usingjpa1.domain.Member;
 import org.assertj.core.api.Assertions;
-import org.hibernate.boot.TempTableDdlTransactionHandling;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Repository;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.jsf.FacesContextUtils;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

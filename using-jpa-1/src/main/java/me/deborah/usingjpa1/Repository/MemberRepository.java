@@ -1,6 +1,6 @@
 package me.deborah.usingjpa1.Repository;
 
-import me.deborah.usingjpa1.member.Member;
+import me.deborah.usingjpa1.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
