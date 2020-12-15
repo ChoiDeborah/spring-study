@@ -2,8 +2,11 @@ package me.deborah.usingjpa1.domain.item;
 
 import lombok.Getter;
 import lombok.Setter;
+import me.deborah.usingjpa1.domain.Category;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -20,4 +23,6 @@ public abstract class Item {
     private int price;
     private int stockQuantity;
 
+    @ManyToMany(mappedBy = "items")
+    private List<Category> categories = new ArrayList<>();
 }
