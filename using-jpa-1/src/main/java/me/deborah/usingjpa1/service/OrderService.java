@@ -9,8 +9,11 @@ import me.deborah.usingjpa1.domain.item.Item;
 import me.deborah.usingjpa1.repository.ItemRepository;
 import me.deborah.usingjpa1.repository.MemberRepository;
 import me.deborah.usingjpa1.repository.OrderRepository;
+import me.deborah.usingjpa1.repository.OrderSearch;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -59,9 +62,9 @@ public class OrderService {
     }
 
     // 검색
-//    public List<Order> findOrders(OrderSearch orderSearch) {
-//        return orderRepository.findAll(orderSearch);
-//    }
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByString(orderSearch);
+    }
 
     //  참고: 주문 서비스의 주문과 주문 취소 메서드를 보면 비즈니스 로직 대부분이 엔티티에 있다.
     //  서비스 계층 은 단순히 엔티티에 필요한 요청을 위임하는 역할을 한다.
