@@ -2,11 +2,14 @@ package me.deborah.usingjpa1.controller;
 
 import lombok.RequiredArgsConstructor;
 import me.deborah.usingjpa1.domain.item.Book;
+import me.deborah.usingjpa1.domain.item.Item;
 import me.deborah.usingjpa1.service.ItemService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -33,4 +36,17 @@ public class ItemController {
         itemService.saveItem(book);
         return "redirect:/";
     }
+
+    // 상품 등록
+    // 상품 등록 폼에서 데이터를 입력하고 Submit 버튼을 클릭하면
+    // /items/new 를 POST 방식으로 요청 상품 저장이 끝나면 상품 목록 화면( redirect:/items )으로 리다이렉트
+
+    @GetMapping("/items")
+    public String list(Model model) {
+        List<Item> items = itemService.findItems();
+        model.addAttribute("items", items);
+        return "items/itemList";
+    }
+    // model에 담아둔 상품 목록인 items 를 꺼내서 상품 정보를 출력
+
 }
