@@ -1,6 +1,8 @@
 package me.deborah.usingjpa1.domain;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import me.deborah.usingjpa1.domain.item.Item;
 import org.aspectj.weaver.ast.Or;
@@ -10,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
     @Id
     @GeneratedValue
@@ -27,6 +30,11 @@ public class OrderItem {
 
     private int orderPrice; // 주문 가격
     private int count;  // 주문 수량
+
+    // createOrderItem 통해서만 생성하도록. @NoArgsConstructor(access = AccessLevel.PROTECTED)
+//    protected OrderItem() {
+//
+//    }
 
     //==생성 메서드==//
     public static OrderItem createOrderItem(Item item, int orderPrice, int count) {
