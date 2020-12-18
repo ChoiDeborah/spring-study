@@ -1,0 +1,12 @@
+- Null-Safety
+스프링 프레임워크 5에 추가된 Null 관련 에노테이션
+
+- 목적
+(툴의 지원을 받아)컴파일 타임에 널포인트 익셉션을 최대한 방지하는 것
+
+@NoneNull
+@Nullable
+@NonNullApi(패키지 레벨 설정)
+@NonNullFields(패키지 레벨 설정)
+
+

@@ -1,0 +1,33 @@
+애플리케이션 컨텍스트가 가지고 있는 기능들 (어플리케이션 컨텍스트가 상속받고 있는 인터페이스 들?)
+
+- EnvironmentCapable
+
+1) 프로파일 Profile
+빈들의 묶음 , 메이븐에도 있음
+어떤 환경임( 어떤 환경에서는 이러이러한 빈들을 사용하겠다.)
+
+각각의 환경에 따라 다른 빈들을 써야하는 경우
+특정 환경에서만 어떤 빈들을 사용해야하는 경우
+
+스프링 어플리 케이션 컨텍스트의 EnvironmentCapable을 통해 사용가능
+
+2)Property
+어플리케이션 에 등록된 여러가지 키벨류 쌍으로 제공되는 프로퍼티에 접근할 수 있는 기능
+계층형으로 접근함 (우선순위가 있다)
+Peropery Source  ex ) OS 환경 변수 Sevlet Config.. -D option
+
+// 둘중 우선순위가 뭐가 더 높냐?
+// PeroperySource? or JVM Option?
+JVM Option 이 높다.
+
+- MessageSource
+국제화 기능을 제공하는 인터페이스.
+메세지를 다국화 하는 방법임
+
+- ApplicationEventPublisher
+옵저버 패턴의 구현체
+이벤트 기반의 프로그래밍 시 유용한 인터페이스
+
+- ResourceLoader
+리소스를 로딩해 주는 인터페이스
+
