@@ -9,8 +9,7 @@ import java.rmi.server.ExportException;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
 @WebMvcTest
@@ -21,23 +20,25 @@ class SampleControllerTest {
 
     @Test
     public void helloTest() throws Exception {
-       mockMvc.perform(get("/hello"))
+       mockMvc.perform(get("/hello/mozzi"))
                .andDo(print())
                .andExpect(status().isOk())                              // 어떤 값이 나오기를 기대한다.
-               .andExpect(content().string("hello"))
+               .andExpect(content().string("hello mozzi"))
        ;
 
-
-        mockMvc.perform(put("/hello"))
+       // 핸들러 자체에 대한 테스트
+        mockMvc.perform(get("/hello/mozzi"))
                 .andDo(print())
                 .andExpect(status().isOk())
+                .andExpect(content().string("hello mozzi"))
+                .andExpect(handler().handlerType(SampleController.class))
+                .andExpect(handler().methodName("helloMozzi"))
         ;
 
-
-        mockMvc.perform(post("/hello"))
-                .andDo(print())
-                .andExpect(status().isMethodNotAllowed())               // GET, PUT 만 허용 했으니 405 Error
-        ;
+//        mockMvc.perform(get("/hi"))
+//                .andDo(print())
+//                .andExpect(status().isOk())
+//        ;
     }
 
 
