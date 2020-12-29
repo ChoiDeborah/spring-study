@@ -67,7 +67,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SampleControllerTest.helloTest">
+  <component name="RunManager" selected="JUnit.SampleControllerTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -77,6 +77,21 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-boot-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.deborah.demowebmvc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.deborah.demowebmvc" />
+      <option name="MAIN_CLASS_NAME" value="me.deborah.demowebmvc.SampleControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SampleControllerTest" />
         <item itemvalue="JUnit.SampleControllerTest.helloTest" />
       </list>
     </recent_temporary>
@@ -121,7 +137,7 @@
       <workItem from="1608287743757" duration="308000" />
       <workItem from="1608288397160" duration="5008000" />
       <workItem from="1609135670098" duration="1623000" />
-      <workItem from="1609137404992" duration="3531000" />
+      <workItem from="1609137404992" duration="5874000" />
     </task>
     <servers />
   </component>
@@ -129,30 +145,30 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1609140772770">
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1609242679225">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091715" />
     <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868624" />
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609140772770" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1609140772769">
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609242679225" />
+    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1609242679224">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091713" />
     <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868623" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609140772769" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1609140772768">
+    <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609242679224" />
+    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1609242679223">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091713" />
     <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868623" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609140772768" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1609140772769">
+    <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609242679223" />
+    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1609242679224">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091714" />
     <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868624" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609140772769" />
+    <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609242679224" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1609137342876">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -199,5 +215,16 @@
     <state x="385" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608289110387" />
     <state x="385" y="156" width="670" height="744" key="search.everywhere.popup/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290836803" />
     <state x="385" y="156" width="670" height="744" key="search.everywhere.popup/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609138067659" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/me/deborah/demowebmvc/SampleControllerTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
