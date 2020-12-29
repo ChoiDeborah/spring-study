@@ -3,10 +3,7 @@ package me.deborah.demowebmvc;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class SampleController {
@@ -86,5 +83,27 @@ public class SampleController {
     @ResponseBody
     public String hello() {
         return "hello";
+    }
+
+    // 맵핑 연습 문제
+    // 1
+    @GetMapping("/events")
+    @ResponseBody
+    public String events() {
+        return "events";
+    }
+
+    // 2
+    @GetMapping("/events/{id}")
+    @ResponseBody
+    public String getAnEvent(@PathVariable("id") int id) {
+        return "event";
+    }
+
+    // 4
+    @DeleteMapping(value = "/events/{id}")
+    @ResponseBody
+    public String removeAnEvent(@PathVariable("id") int id) {
+        return "event";
     }
 }
