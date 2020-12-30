@@ -24,6 +24,21 @@ class SampleControllerTest {
     private MockMvc mockMvc;
 
     @Test
+    public void eventForm() throws Exception {
+
+        mockMvc.perform(get("/events/form"))
+                .andDo(print())
+                .andExpect(view().name("events/form"))
+                .andExpect(model().attributeExists("event"))
+        ;
+        // given
+
+        // when
+
+        // then
+    }
+
+    @Test
     public void getEvents() throws Exception {
         mockMvc.perform(post("/events?name=mozzi")
                     .param("name, ","mozzi")
