@@ -1,8 +1,20 @@
 package me.deborah.demowebmvc;
 
 public class Event {
+
     private Integer id;
+
     private String name;
+
+    private Integer limit;
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
 
     public Integer getId() {
         return id;
