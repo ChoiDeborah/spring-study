@@ -5,26 +5,30 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@SessionAttributes("event")
 public class SampleController {
 
     @GetMapping("events/form")
-    public String eventForm(Model model) {
-        Event event = new Event();
-        event.setLimit(100);
-        model.addAttribute("event", new Event());
+    public String eventForm(Model model, HttpSession httpSession) {
+        Event newEvent = new Event();
+        newEvent.setLimit(100);
+        model.addAttribute("event", newEvent);
+        httpSession.setAttribute("event", newEvent);
         return "events/form";
     }
 
     @PostMapping("/events")
     public String createEvent(@Validated @ModelAttribute Event event,
                               BindingResult bindingResult,
-                              Model model) {
+                              SessionStatus sessionStatus) {
         if (bindingResult.hasErrors()) {
             return "/events/form";
         }
@@ -33,6 +37,7 @@ public class SampleController {
         //List<Event> eventList = new ArrayList<>();
         //eventList.add(event);
         //model.addAttribute("eventList", eventList);
+        sessionStatus.setComplete();
         return "redirect:events/list";
     }
 
