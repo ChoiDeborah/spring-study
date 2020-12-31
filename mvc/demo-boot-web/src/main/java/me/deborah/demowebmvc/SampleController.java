@@ -16,30 +16,39 @@ import java.util.List;
 @SessionAttributes("event")
 public class SampleController {
 
-    @GetMapping("events/form")
-    public String eventForm(Model model, HttpSession httpSession) {
-        Event newEvent = new Event();
-        newEvent.setLimit(100);
-        model.addAttribute("event", newEvent);
-        httpSession.setAttribute("event", newEvent);
-        return "events/form";
+    @GetMapping("events/form/name")
+    public String eventssFormName(Model model, HttpSession httpSession) {
+        model.addAttribute("event", new Event());
+        return "/events/form-name";
     }
 
-    @PostMapping("/events")
-    public String createEvent(@Validated @ModelAttribute Event event,
-                              BindingResult bindingResult,
-                              SessionStatus sessionStatus) {
+    @PostMapping("/events/form/name")
+    public String eventsFormNameSubmit(@Validated @ModelAttribute Event event,
+                              BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "/events/form";
+            return "/events/form-name";
         }
-
-        // DB SAVE 로직 타야 함.
-        //List<Event> eventList = new ArrayList<>();
-        //eventList.add(event);
-        //model.addAttribute("eventList", eventList);
-        sessionStatus.setComplete();
-        return "redirect:events/list";
+        return "redirect:/events/form/limit";
     }
+
+    @GetMapping("/events/form/limit")
+    public String eventssFormLimit(@ModelAttribute Event event, Model model) {
+        model.addAttribute("event", event);
+        return "/events/form-limit";
+    }
+
+    @PostMapping("/events/form/limit")
+    public String eventsFormLimitSubmit(@Validated @ModelAttribute Event event,
+                                        BindingResult bindingResult,
+                                        SessionStatus sessionStatus) {
+        if (bindingResult.hasErrors()) {
+            return "/events/form-limit";
+        }
+        sessionStatus.setComplete();
+        return "redirect:/events/list";
+    }
+
+
 
     @GetMapping("/events/list")
     public String getEvents(Model model) {
