@@ -1,11 +1,14 @@
 package me.deborah.demowebmvc;
 
+import javax.validation.constraints.Min;
+
 public class Event {
 
     private Integer id;
 
     private String name;
 
+    @Min(value = 0, message = "Limit should not be less than 0")
     private Integer limit;
 
     public Integer getLimit() {

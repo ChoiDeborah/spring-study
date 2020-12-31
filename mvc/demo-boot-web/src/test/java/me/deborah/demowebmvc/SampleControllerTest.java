@@ -42,7 +42,7 @@ class SampleControllerTest {
     public void getEvents() throws Exception {
         mockMvc.perform(post("/events?name=mozzi")
                     .param("name, ","mozzi")
-                    .param("limit", "20"))  // 파라미터로 문자열만 줄 수 있음
+                    .param("limit", "-10"))  // 파라미터로 문자열만 줄 수 있음
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("name").value("mozzi"));

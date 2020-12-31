@@ -1,9 +1,12 @@
 package me.deborah.demowebmvc;
 
-import org.apache.coyote.Request;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 public class SampleController {
@@ -18,12 +21,13 @@ public class SampleController {
 
     @PostMapping("/events")
     @ResponseBody
-    // required = true 기본 값
-    public Event getEvent(@RequestParam String name /*@RequestParam(required = false, defaultValue = "mozzi"*/,
-                          @RequestParam Integer limit) {
-        Event event = new Event();
-        event.setName(name);
-        event.setLimit(limit);
+    public Event getEvent(@Valid @ModelAttribute Event event, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            System.out.println("=================");
+            bindingResult.getAllErrors().forEach(c -> {
+                System.out.println(c.toString());
+            });
+        }
         return event;
     }
 }
