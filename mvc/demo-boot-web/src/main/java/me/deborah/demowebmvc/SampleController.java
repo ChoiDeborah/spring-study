@@ -21,7 +21,7 @@ public class SampleController {
 
     @PostMapping("/events")
     @ResponseBody
-    public Event getEvent(@Valid @ModelAttribute Event event, BindingResult bindingResult) {
+    public Event getEvent(@Validated(Event.ValidateLimit.class) @ModelAttribute Event event, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             System.out.println("=================");
             bindingResult.getAllErrors().forEach(c -> {
