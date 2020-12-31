@@ -7,6 +7,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class SampleController {
@@ -20,14 +22,32 @@ public class SampleController {
     }
 
     @PostMapping("/events")
-    @ResponseBody
-    public Event getEvent(@Validated(Event.ValidateLimit.class) @ModelAttribute Event event, BindingResult bindingResult) {
-        if(bindingResult.hasErrors()) {
-            System.out.println("=================");
-            bindingResult.getAllErrors().forEach(c -> {
-                System.out.println(c.toString());
-            });
+    public String createEvent(@Validated @ModelAttribute Event event,
+                              BindingResult bindingResult,
+                              Model model) {
+        if (bindingResult.hasErrors()) {
+            return "/events/form";
         }
-        return event;
+
+        // DB SAVE 로직 타야 함.
+        //List<Event> eventList = new ArrayList<>();
+        //eventList.add(event);
+        //model.addAttribute("eventList", eventList);
+        return "redirect:events/list";
+    }
+
+    @GetMapping("/events/list")
+    public String getEvents(Model model) {
+        // DB에서 읽어왔다고 가정하겠다. 밑의 코드는 예제를 위한 것
+        Event event = new Event();
+        event.setName("mozzi");
+        event.setLimit(10);
+
+        List<Event> eventList = new ArrayList<>();
+        eventList.add(event);
+
+        model.addAttribute("eventList", eventList);
+
+        return "events/list";
     }
 }
