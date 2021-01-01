@@ -9,6 +9,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,10 +49,13 @@ public class SampleController {
         return "redirect:/events/list";
     }
 
-
-
     @GetMapping("/events/list")
-    public String getEvents(Model model) {
+    public String getEvents(Model model, @SessionAttribute LocalDateTime visitTime /*HttpSession httpSession*/) {
+        System.out.println("visitTime = " + visitTime);
+
+        //LocalTime visitTime = (LocalDataTime) httpSession.getAttribute("visitTime")  // Obejct로 반환 됨
+        //System.out.println(visitTime);
+
         // DB에서 읽어왔다고 가정하겠다. 밑의 코드는 예제를 위한 것
         Event event = new Event();
         event.setName("mozzi");
