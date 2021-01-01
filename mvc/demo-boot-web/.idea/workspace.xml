@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164da9f4-e286-425e-9b0c-e2798d61d5ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/deborah/demowebmvc/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/files/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/me/deborah/demowebmvc/FileControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/deborah/demowebmvc/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/deborah/demowebmvc/SampleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/memo" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/memo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/deborah/demowebmvc/SampleControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/deborah/demowebmvc/SampleControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/deborah/demowebmvc/SampleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/deborah/demowebmvc/SampleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/me/deborah/demowebmvc/SampleControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/me/deborah/demowebmvc/SampleControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +19,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="AnnotationType" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -42,7 +41,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
@@ -57,7 +55,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/events" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/files" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,10 +72,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/files" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/events" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SampleControllerTest.getEvents">
+  <component name="RunManager" selected="JUnit.FileControllerTest.fileUploadTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -104,6 +103,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileControllerTest.fileUploadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-boot-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.deborah.demowebmvc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.deborah.demowebmvc" />
+      <option name="MAIN_CLASS_NAME" value="me.deborah.demowebmvc.FileControllerTest" />
+      <option name="METHOD_NAME" value="fileUploadTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SampleControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo-boot-web" />
       <extension name="coverage">
@@ -115,22 +130,6 @@
       <option name="PACKAGE_NAME" value="me.deborah.demowebmvc" />
       <option name="MAIN_CLASS_NAME" value="me.deborah.demowebmvc.SampleControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SampleControllerTest.createEvent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo-boot-web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.deborah.demowebmvc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.deborah.demowebmvc" />
-      <option name="MAIN_CLASS_NAME" value="me.deborah.demowebmvc.SampleControllerTest" />
-      <option name="METHOD_NAME" value="createEvent" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileControllerTest.fileUploadTest" />
         <item itemvalue="JUnit.SampleControllerTest.getEvents" />
         <item itemvalue="JUnit.SampleControllerTest" />
         <item itemvalue="JUnit.DemoWebMvcApplicationTests" />
         <item itemvalue="JUnit.SampleControllerTest.deleteEvent" />
-        <item itemvalue="JUnit.SampleControllerTest.createEvent" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +200,7 @@
       <workItem from="1609300008916" duration="7000" />
       <workItem from="1609300049190" duration="5672000" />
       <workItem from="1609388356579" duration="1850000" />
-      <workItem from="1609394035970" duration="10784000" />
+      <workItem from="1609394035970" duration="12534000" />
     </task>
     <servers />
   </component>
@@ -225,61 +224,61 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609299346569" />
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1609462028146">
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1609475043516">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091715" />
     <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868624" />
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609462028146" />
+    <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043516" />
     <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708815" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1609462028146">
+    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1609475043515">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091713" />
     <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868623" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609462028146" />
+    <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043515" />
     <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708815" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1609462028145">
+    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1609475043515">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091713" />
     <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868623" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609462028145" />
+    <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043515" />
     <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708814" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1609462028146">
+    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1609475043515">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091714" />
     <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868624" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609462028146" />
+    <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043515" />
     <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708815" />
-    <state width="1398" height="230" key="GridCell.Tab.1.bottom" timestamp="1609461307622">
+    <state width="1398" height="230" key="GridCell.Tab.1.bottom" timestamp="1609475043511">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.1.bottom/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091716" />
     <state width="1398" height="204" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868625" />
-    <state width="1398" height="230" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609461307622" />
+    <state width="1398" height="230" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043511" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708581" />
-    <state width="1398" height="230" key="GridCell.Tab.1.center" timestamp="1609461307621">
+    <state width="1398" height="230" key="GridCell.Tab.1.center" timestamp="1609475043511">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.1.center/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091716" />
     <state width="1398" height="204" key="GridCell.Tab.1.center/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868625" />
-    <state width="1398" height="230" key="GridCell.Tab.1.center/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609461307621" />
+    <state width="1398" height="230" key="GridCell.Tab.1.center/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043511" />
     <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708579" />
-    <state width="1398" height="230" key="GridCell.Tab.1.left" timestamp="1609461307621">
+    <state width="1398" height="230" key="GridCell.Tab.1.left" timestamp="1609475043510">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.1.left/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091715" />
     <state width="1398" height="204" key="GridCell.Tab.1.left/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868624" />
-    <state width="1398" height="230" key="GridCell.Tab.1.left/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609461307621" />
+    <state width="1398" height="230" key="GridCell.Tab.1.left/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043510" />
     <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708578" />
-    <state width="1398" height="230" key="GridCell.Tab.1.right" timestamp="1609461307622">
+    <state width="1398" height="230" key="GridCell.Tab.1.right" timestamp="1609475043511">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.1.right/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608570091716" />
     <state width="1398" height="204" key="GridCell.Tab.1.right/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290868625" />
-    <state width="1398" height="230" key="GridCell.Tab.1.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609461307622" />
+    <state width="1398" height="230" key="GridCell.Tab.1.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475043511" />
     <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877/1440.-717.2560.1417@1440.-717.2560.1417" timestamp="1609394708580" />
     <state width="1398" height="286" key="GridCell.Tab.2.bottom" timestamp="1609457527517">
       <screen x="0" y="23" width="1440" height="877" />
@@ -297,10 +296,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="286" key="GridCell.Tab.2.right/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609457527517" />
-    <state x="258" y="123" key="Maven.ArtifactSearchDialog" timestamp="1609393496370">
+    <state x="258" y="123" key="Maven.ArtifactSearchDialog" timestamp="1609475142855">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="258" y="123" key="Maven.ArtifactSearchDialog/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609393496370" />
+    <state x="258" y="123" key="Maven.ArtifactSearchDialog/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475142855" />
     <state width="889" height="770" key="SwitcherDM" timestamp="1609394635252">
       <screen x="1440" y="-717" width="2560" height="1417" />
     </state>
@@ -310,10 +309,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="534" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609410691510" />
-    <state x="483" y="250" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1608289206349">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="483" y="273" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1609475113364">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="483" y="250" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608289206349" />
+    <state x="483" y="273" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475113364" />
     <state x="418" y="187" width="604" height="548" key="find.popup" timestamp="1609410467968">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -322,12 +322,12 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609135974822" />
-    <state x="385" y="156" width="670" height="744" key="search.everywhere.popup" timestamp="1609460460137">
+    <state x="385" y="156" width="670" height="744" key="search.everywhere.popup" timestamp="1609475574693">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797/1440.-717.2560.1417@0.23.1440.797" timestamp="1608289110387" />
     <state x="385" y="156" width="670" height="744" key="search.everywhere.popup/0.23.1440.877/1440.-717.2560.1337@0.23.1440.877" timestamp="1608290836803" />
-    <state x="385" y="156" width="670" height="744" key="search.everywhere.popup/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609460460137" />
+    <state x="385" y="156" width="670" height="744" key="search.everywhere.popup/0.23.1440.877/1440.-717.2560.1417@0.23.1440.877" timestamp="1609475574693" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
