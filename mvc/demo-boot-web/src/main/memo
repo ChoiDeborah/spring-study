@@ -87,3 +87,18 @@ SessionStatus를 사용해서 세션 처리 완료를 알려줄 수 있다.
 
 리다이렉트 요청을 처리하는 곳에서 쿼리 매개변수를 @RequestParam 또는 @ModelAttribute로 받을 수
 있다.
+
+- 핸들러 메소드 12부: Flash Attributes
+
+주로 리다이렉트시에 데이터를 전달할 때 사용한다.
+    ● 데이터가 URI에 노출되지 않는다.
+    ● 임의의 객체를 저장할 수 있다.
+    ● 보통 HTTP 세션을 사용한다.
+
+리다이렉트 하기 전에 데이터를 HTTP 세션에 저장하고 리다이렉트 요청을 처리 한 다음 그 즉시 제거한다.
+
+RedirectAttributes 를 통해 사용할 수 있다.
+
+XPath
+    ● https://www.w3schools.com/xml/xpath_syntax.asp
+    ● https://www.freeformatter.com/xpath-tester.html#ad-output

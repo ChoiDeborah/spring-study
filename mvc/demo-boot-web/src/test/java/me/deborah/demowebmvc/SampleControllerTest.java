@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.awt.*;
 import java.rmi.server.ExportException;
+import java.time.LocalDateTime;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -51,5 +52,20 @@ class SampleControllerTest {
         ModelAndView modelAndView = result.andReturn().getModelAndView();
         Map<String, Object> model = modelAndView.getModel();
         System.out.println(model.size());
+    }
+
+    @Test
+    public void getEvents() throws Exception {
+        Event newEvent = new Event();
+        newEvent.setName("mozzi");
+        newEvent.setLimit(1000);
+
+        mockMvc.perform(get("/events/list")
+            .sessionAttr("visitTime", LocalDateTime.now())
+            .flashAttr("newEvent", newEvent))
+                .andDo(print())
+                .andExpect(status().isOk())
+                //.andExpect(xpath("//p").nodeCount(2))
+        ;
     }
 }
