@@ -19,11 +19,27 @@ import java.util.List;
 @SessionAttributes("event")
 public class EventController {
 
+    @ModelAttribute
+    public void categories(Model model) {
+        model.addAttribute("categories", List.of("study", "semina", "hobby", "social"));
+    }
+
+//    @ModelAttribute("categories")
+//    public List<String> categories(Model model) {
+//        return List.of("study", "semina", "hobby", "social");
+//    }
+
     @GetMapping("events/form/name")
-    public String eventssFormName(Model model, HttpSession httpSession) {
+    public String eventsFormName(Model model) {
         model.addAttribute("event", new Event());
         return "/events/form-name";
     }
+
+//    @GetMapping("events/form/name")     // RequestToViewNameTranslator 에 의해 events/form/name가 return 됨.
+//    @ModelAttribute
+//    public Event eventssFormName(Model model) {
+//        return new Event();
+//    }
 
     @PostMapping("/events/form/name")
     public String eventsFormNameSubmit(@Validated @ModelAttribute Event event,
