@@ -20,6 +20,12 @@ import java.util.List;
 @SessionAttributes("event")
 public class EventController {
 
+    @ExceptionHandler({EventException.class, RuntimeException.class})
+    public String eventErrorHandler(RuntimeException exception, Model model) {
+        model.addAttribute("message", "runtime error");
+        return "error";
+    }
+
     @InitBinder("event")
     public void initEventBinder(WebDataBinder webDataBinder) {
         webDataBinder.setDisallowedFields("id");    // 아이디 값을 바인딩 하지 않음.
@@ -39,8 +45,10 @@ public class EventController {
 
     @GetMapping("events/form/name")
     public String eventsFormName(Model model) {
-        model.addAttribute("event", new Event());
-        return "/events/form-name";
+
+        throw new EventException();
+//        model.addAttribute("event", new Event());
+//        return "/events/form-name";
     }
 
 //    @GetMapping("events/form/name")     // RequestToViewNameTranslator 에 의해 events/form/name가 return 됨.
