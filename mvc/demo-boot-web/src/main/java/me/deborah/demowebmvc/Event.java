@@ -1,7 +1,10 @@
 package me.deborah.demowebmvc;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
 
 public class Event {
 
@@ -10,9 +13,11 @@ public class Event {
     @NotBlank
     private String name;
 
-
     @Min(0)
     private Integer limit;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate startDate;
 
     public Integer getLimit() {
         return limit;
@@ -36,5 +41,13 @@ public class Event {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 }
