@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-//@Table(name ="USER")
+@Entity/*(name = "Member")*/
+//@Table(name ="MBR")
 public class Member {
 
     @Id

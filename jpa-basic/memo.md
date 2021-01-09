@@ -1,7 +1,7 @@
 
 ## JPA 내부구조
 
-#### 영속성 관리
+### 영속성 관리
 
 ##### JPA에서 가장 중요한 2가지  
 - 객체와 관계형 데이터 베이스 매핑하기 (Object RelationalMapping)
@@ -198,3 +198,29 @@ em.setFlushMode(FlushModeType.COMMIT)
     영속성 컨텍스트를 완전히 초기화
 - em.close()  
     영속성 컨텍스트를 종료
+    
+---
+### 엔티티 매핑
+
+#### 엔티티 매핑 소개
+- 객체와 태이블 매핑 : @Entity, @Table
+- 필드와 컬럼 매핑: @Column
+- 기본 키 매핑 : @Id
+- 연관관계 매핑 : @ManyToOne, @JoinColumn
+
+#### 객체와 테이블 매핑
+
+##### @Entity
+- @Entity가 붙은 클래스는 JPA가 관리, 엔티티라 한다.
+- JPA를 사용해서 테이블과 매핑할 클래스는 **@Entity** 필수
+- **주의**
+    - **기본 생성자 필수**(파라미터가 없는 public 또는 protected 생성자)
+    - final 클래스, enum, interface, inner 클래스 사용 X
+    - 저장 필드에 final 사용 X
+
+##### @Entity 속성 정리
+- 속성 : name
+    - JPA에서 사용할 엔티티 이름을 지정한다
+    - 기본값 : 클래스 이름을 그대로 사용(예 : Member)
+    - 같은 클래스 이름이 없으면 가급적 기본값을 사용한다  
+    
