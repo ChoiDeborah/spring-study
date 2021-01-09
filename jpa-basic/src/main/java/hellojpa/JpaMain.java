@@ -36,14 +36,22 @@ public class JpaMain {
             // 테이블이 아닌 객체를 대상으로 검색하는 객체 지향 쿼리
             // SQL을 추상화 해서 특정 데이터베이스 SQL에 의존 X
 
+            // 비영속
+            Member member = new Member();
+            member.setId(100L);
+            member.setName("HelloJPA");
+
+            // 객체를 저장한 상태 영속(엔티티 매니저 안의 영속성 컨텍스트를 통해서 맴버가 관리됨)
+            em.persist(member);
+            // 회원 엔티티를 영속성 컨텍스트에서 분리, 준영속 상태
+            em.detach(member);
+            // 객체를 삭제한 상태(삭제)
+            em.remove(member);
+
             List<Member> result = em.createQuery("select m from Member as m", Member.class)
                     .setFirstResult(5)
                     .setMaxResults(8)
                     .getResultList();
-
-            for (Member member : result) {
-                System.out.println("member name = " + member.getName());
-            }
 
             tx.commit();
         } catch (Exception e) {
