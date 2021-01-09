@@ -36,22 +36,38 @@ public class JpaMain {
             // 테이블이 아닌 객체를 대상으로 검색하는 객체 지향 쿼리
             // SQL을 추상화 해서 특정 데이터베이스 SQL에 의존 X
 
-            // 비영속
-            Member member = new Member();
-            member.setId(100L);
-            member.setName("HelloJPA");
+//            // 비영속
+//            Member member = new Member();
+//            member.setId(101L);
+//            member.setName("HelloJPA");
 
-            // 객체를 저장한 상태 영속(엔티티 매니저 안의 영속성 컨텍스트를 통해서 맴버가 관리됨)
-            em.persist(member);
-            // 회원 엔티티를 영속성 컨텍스트에서 분리, 준영속 상태
-            em.detach(member);
-            // 객체를 삭제한 상태(삭제)
-            em.remove(member);
+//            // 영속 객체를 저장한 상태 영속(엔티티 매니저 안의 영속성 컨텍스트를 통해서 맴버가 관리됨)
+//            System.out.println("===== BEFORE =====");
+//            em.persist(member); // 1차 캐시에 저장
+//            System.out.println("===== AFTER =====");
+//
+//            Member findMember = em.find(Member.class, 101L);    // 1차 캐시에 있는것을 반환
+//            System.out.println("findMember  = " + findMember);
+//
+//            System.out.println("findMember.id = " + findMember.getId());
+//            System.out.println("findMember.name = " + findMember.getName());
 
-            List<Member> result = em.createQuery("select m from Member as m", Member.class)
-                    .setFirstResult(5)
-                    .setMaxResults(8)
-                    .getResultList();
+//            Member findMember1 = em.find(Member.class, 101L);   // 첫번 째 조회시 쿼리로 디비에서 조회 후 영속성 컨텍스트에 올린다(1차 캐시)
+//            Member findMember2 = em.find(Member.class, 101L);   // 두번째 부터는 1차 캐시에서 가져온다.
+//
+//            System.out.println("result = " + (findMember1 == findMember2));
+
+//            Member member1 = new Member(150L, "A");
+//            Member member2 = new Member(150L, "B");
+//
+//            em.persist(member1);
+//            em.persist(member2);
+
+            Member member = em.find(Member.class, 101L);
+            member.setName("ZZZZ");
+            //  em.persist(member); 필요 없
+
+            System.out.println("========================");
 
             tx.commit();
         } catch (Exception e) {
