@@ -1,9 +1,7 @@
 package hellojpa;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Member {
@@ -11,33 +9,26 @@ public class Member {
     @Id
     private Long id;
 
-    // 런타임 JPA의 실행매커니즘 자체에 영향을 주는게 아니라 alter table 스크립트가 생성되거나 실행되는 것에 차이가 있을
-    @Column(unique = true, length = 10)
-    private String name;
+    @Column(name = "name", updatable = false)
+    private String username;    // 객체는 username
 
-    private int age;
+    private Integer age;
+
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
+
+    @Lob
+    private String description;
+
+    @Transient  // 메모리에서만 쓰고싶다 디비에서는 안쓰겠다
+    private int temp;
 
     public Member() {
-    }
-
-    public Member(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
